@@ -4,7 +4,7 @@
       <div class="card-header">
         <h4>
           User
-          <RouterLink to="/user/create" class="btn btn-primary float-end">Add User</RouterLink>
+          <RouterLink to="/users/create" class="btn btn-primary float-end">Add User</RouterLink>
         </h4>
       </div>
       <div class="card-body">
@@ -20,7 +20,7 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody v-if="users.length > 0">
             <tr v-for="users in users">
               <td>{{ users.id }}</td>
               <td>{{ users.firstname }}</td>
@@ -32,6 +32,11 @@
                 <RouterLink to="/" class="btn btn-success">Edit</RouterLink>
                 <button type="button" class="btn btn-danger">Delete</button>
               </td>
+            </tr>
+          </tbody>
+          <tbody v-else>
+            <tr>
+              <td colspan="7">Loading...</td>
             </tr>
           </tbody>
         </table>
