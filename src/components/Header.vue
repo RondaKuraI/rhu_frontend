@@ -26,8 +26,13 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style>
+/*
 .navbar{
     background-color: #a2c579;
-    font-family: Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+.navbar-brand{
+    font-weight: 700;
+}
+*/
 </style>
