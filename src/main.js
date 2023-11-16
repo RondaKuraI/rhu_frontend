@@ -1,17 +1,18 @@
-//import "bootstrap/dist/css/bootstrap.css"
 import { createApp } from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
+//import '.registerServiceWorker'
 import router from './router'
 import axios from 'axios'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
 
-import "@fontsource/poppins/200.css";
-import "@fontsource/poppins/700.css";
-import './assets/sty.css';
 import "./assets/main.css";
 
-axios.defaults.baseURL="http://rhu_backend.test/"
+loadFonts()
 
-createApp(App).use(router).mount('#app')
+axios.defaults.baseURL = "http://rhu_backend.test/"
 
-//import "bootstrap/dist/js/bootstrap.js"
+createApp(App)
+  .use(router)
+  .use(vuetify)
+  .mount('#app')

@@ -1,19 +1,18 @@
 <template>
-  <div class="home">
-    <h1>This is a home pageewefwefwefwe</h1>
-  </div>
+  <h4>sefsefsfsef</h4>
 </template>
 
-<!--
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { defineComponent } from 'vue';
 
-export default {
+// Components
+import HelloWorld from '../components/HelloWorld.vue';
+
+export default defineComponent({
   name: 'HomeView',
+
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+});
 </script>
--->
